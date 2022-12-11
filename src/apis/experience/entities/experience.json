@@ -1,0 +1,29 @@
+{
+  "type": "collection",
+  "tableName": "experiences",
+  "singularName": "experience",
+  "pluralName": "experiences",
+  "displayName": "Experience",
+  "attributes": [
+    {
+      "type": "string",
+      "columnName": "label",
+      "displayName": "Label"
+    },
+    {
+      "type": "string",
+      "columnName": "code",
+      "displayName": "Code"
+    },
+    {
+      "type": "relation",
+      "columnName": "jobs",
+      "displayName": "Jobs",
+      "relation": "oneToMany",
+      "association": "hasMany",
+      "reference": "job",
+      "referenceColumnName": "experience",
+      "referenceDisplayName": "Experience"
+    }
+  ]
+}

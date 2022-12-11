@@ -1,0 +1,34 @@
+{
+  "type": "collection",
+  "tableName": "applied_jobs",
+  "singularName": "applied_job",
+  "pluralName": "applied_jobs",
+  "displayName": "Applied Job",
+  "attributes": [
+    {
+      "type": "datetime",
+      "columnName": "applied_at",
+      "displayName": "Applied At"
+    },
+    {
+      "type": "relation",
+      "columnName": "job",
+      "displayName": "Job",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "job",
+      "referenceColumnName": "applied_jobs",
+      "referenceDisplayName": "Applied Jobs"
+    },
+    {
+      "type": "relation",
+      "columnName": "user",
+      "displayName": "User",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "user",
+      "referenceColumnName": "applied_jobs",
+      "referenceDisplayName": "Applied Jobs"
+    }
+  ]
+}

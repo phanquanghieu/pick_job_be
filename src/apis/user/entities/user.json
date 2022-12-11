@@ -1,0 +1,100 @@
+{
+  "type": "collection",
+  "tableName": "users",
+  "singularName": "user",
+  "pluralName": "users",
+  "displayName": "User",
+  "attributes": [
+    {
+      "type": "string",
+      "columnName": "username",
+      "displayName": "Username",
+      "isEditable": false
+    },
+    {
+      "type": "email",
+      "columnName": "email",
+      "displayName": "Email",
+      "isEditable": false
+    },
+    {
+      "type": "password",
+      "columnName": "password",
+      "displayName": "Password",
+      "private": true,
+      "isEditable": false
+    },
+    {
+      "type": "string",
+      "columnName": "reset_password_token",
+      "displayName": "Reset Password Token",
+      "private": true,
+      "isEditable": false
+    },
+    {
+      "type": "boolean",
+      "columnName": "is_blocked",
+      "displayName": "Is Blocked",
+      "isEditable": false
+    },
+    {
+      "type": "relation",
+      "columnName": "role",
+      "displayName": "Role",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "role",
+      "referenceColumnName": "users",
+      "referenceDisplayName": "Users",
+      "isEditable": false
+    },
+    {
+      "type": "string",
+      "columnName": "full_name",
+      "displayName": "Full Name"
+    },
+    {
+      "type": "enum",
+      "columnName": "gender",
+      "displayName": "Gender",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ]
+    },
+    {
+      "type": "date",
+      "columnName": "birthday",
+      "displayName": "Birthday"
+    },
+    {
+      "type": "file",
+      "columnName": "file_cv",
+      "displayName": "File CV",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "file"
+    },
+    {
+      "type": "relation",
+      "columnName": "company",
+      "displayName": "Company",
+      "relation": "oneToOne",
+      "association": "belongsTo",
+      "reference": "company",
+      "referenceColumnName": "user",
+      "referenceDisplayName": "User"
+    },
+    {
+      "type": "relation",
+      "columnName": "applied_jobs",
+      "displayName": "Applied Jobs",
+      "relation": "oneToMany",
+      "association": "hasMany",
+      "reference": "applied_job",
+      "referenceColumnName": "user",
+      "referenceDisplayName": "User"
+    }
+  ]
+}

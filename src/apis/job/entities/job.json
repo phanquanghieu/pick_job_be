@@ -1,0 +1,99 @@
+{
+  "type": "collection",
+  "tableName": "jobs",
+  "singularName": "job",
+  "pluralName": "jobs",
+  "displayName": "Job",
+  "attributes": [
+    {
+      "type": "string",
+      "columnName": "name",
+      "displayName": "Name"
+    },
+    {
+      "type": "text",
+      "columnName": "description",
+      "displayName": "Description"
+    },
+    {
+      "type": "text",
+      "columnName": "requirement",
+      "displayName": "Requirement"
+    },
+    {
+      "type": "text",
+      "columnName": "benefit",
+      "displayName": "Benefit"
+    },
+    {
+      "type": "string",
+      "columnName": "address",
+      "displayName": "Address"
+    },
+    {
+      "type": "integer",
+      "columnName": "number_of_recruits",
+      "displayName": "Number Of Recruits"
+    },
+    {
+      "type": "relation",
+      "columnName": "company",
+      "displayName": "Company",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "company",
+      "referenceColumnName": "jobs",
+      "referenceDisplayName": "Jobs"
+    },
+    {
+      "type": "relation",
+      "columnName": "applied_jobs",
+      "displayName": "Applied Jobs",
+      "relation": "oneToMany",
+      "association": "hasMany",
+      "reference": "applied_job",
+      "referenceColumnName": "job",
+      "referenceDisplayName": "Job"
+    },
+    {
+      "type": "relation",
+      "columnName": "experience",
+      "displayName": "Experience",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "experience",
+      "referenceColumnName": "jobs",
+      "referenceDisplayName": "Jobs"
+    },
+    {
+      "type": "relation",
+      "columnName": "location",
+      "displayName": "Location",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "location",
+      "referenceColumnName": "jobs",
+      "referenceDisplayName": "Jobs"
+    },
+    {
+      "type": "relation",
+      "columnName": "salary",
+      "displayName": "Salary",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "salary",
+      "referenceColumnName": "jobs",
+      "referenceDisplayName": "Jobs"
+    },
+    {
+      "type": "relation",
+      "columnName": "area",
+      "displayName": "Area",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "area",
+      "referenceColumnName": "jobs",
+      "referenceDisplayName": "Jobs"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "collection",
+  "tableName": "locations",
+  "singularName": "location",
+  "pluralName": "locations",
+  "displayName": "Location",
+  "attributes": [
+    {
+      "type": "string",
+      "columnName": "label",
+      "displayName": "Label"
+    },
+    {
+      "type": "string",
+      "columnName": "code",
+      "displayName": "Code"
+    },
+    {
+      "type": "relation",
+      "columnName": "jobs",
+      "displayName": "Jobs",
+      "relation": "oneToMany",
+      "association": "hasMany",
+      "reference": "job",
+      "referenceColumnName": "location",
+      "referenceDisplayName": "Location"
+    }
+  ]
+}

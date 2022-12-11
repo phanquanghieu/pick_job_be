@@ -1,0 +1,18 @@
+{
+  "name": "pick_job_be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "hentity start",
+    "develop": "hentity develop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hentity": "^2.4.3",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "type": "collection",
+  "tableName": "companies",
+  "singularName": "company",
+  "pluralName": "companies",
+  "displayName": "Company",
+  "attributes": [
+    {
+      "type": "string",
+      "columnName": "name",
+      "displayName": "Name"
+    },
+    {
+      "type": "string",
+      "columnName": "address",
+      "displayName": "Address"
+    },
+    {
+      "type": "text",
+      "columnName": "introduction",
+      "displayName": "Introduction"
+    },
+    {
+      "type": "file",
+      "columnName": "avatar",
+      "displayName": "Avatar",
+      "relation": "oneToMany",
+      "association": "belongsTo",
+      "reference": "file"
+    },
+    {
+      "type": "relation",
+      "columnName": "jobs",
+      "displayName": "Jobs",
+      "relation": "oneToMany",
+      "association": "hasMany",
+      "reference": "job",
+      "referenceColumnName": "company",
+      "referenceDisplayName": "Company"
+    },
+    {
+      "type": "relation",
+      "columnName": "user",
+      "displayName": "User",
+      "relation": "oneToOne",
+      "association": "hasOne",
+      "reference": "user",
+      "referenceColumnName": "company",
+      "referenceDisplayName": "Company"
+    }
+  ]
+}
