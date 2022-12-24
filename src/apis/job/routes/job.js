@@ -6,6 +6,13 @@ module.exports = {
     middlewares: [],
   },
 
+  findByCompany: {
+    method: 'GET',
+    path: '/jobs/company',
+    handler: 'api.job.job.find',
+    middlewares: ['api.job.get_user_company', 'api.job.find_by_company'],
+  },
+
   count: {
     method: 'GET',
     path: '/jobs/count',

@@ -1,36 +1,29 @@
 module.exports = {
-  find: {
+  findByCompany: {
     method: 'GET',
-    path: '/applied_jobs',
-    handler: 'api.applied_job.applied_job.find',
+    path: '/applied_jobs/company',
+    handler: 'api.applied_job.applied_job.findByCompany',
     middlewares: [],
   },
 
-  findOne: {
+  findByUser: {
     method: 'GET',
-    path: '/applied_jobs/:id',
-    handler: 'api.applied_job.applied_job.findOne',
+    path: '/applied_jobs/user',
+    handler: 'api.applied_job.applied_job.findByUser',
     middlewares: [],
   },
 
-  create: {
+  checkApplied: {
+    method: 'GET',
+    path: '/applied_jobs/check/:job_id',
+    handler: 'api.applied_job.applied_job.checkApplied',
+    middlewares: [],
+  },
+
+  apply: {
     method: 'POST',
     path: '/applied_jobs',
-    handler: 'api.applied_job.applied_job.create',
-    middlewares: [],
-  },
-
-  update: {
-    method: 'PUT',
-    path: '/applied_jobs/:id',
-    handler: 'api.applied_job.applied_job.update',
-    middlewares: [],
-  },
-
-  delete: {
-    method: 'DELETE',
-    path: '/applied_jobs/:id',
-    handler: 'api.applied_job.applied_job.delete',
+    handler: 'api.applied_job.applied_job.apply',
     middlewares: [],
   },
 }

@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hentity": "^2.4.3",
+    "hentity": "^2.4.4",
     "lodash": "^4.17.21"
   }
 }
